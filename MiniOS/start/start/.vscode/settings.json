@@ -1,0 +1,26 @@
+{
+    "cmake.configureOnOpen": false,
+    "cmake.sourceDirectory": "${workspaceFolder}/.",
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "*.json": "json",
+        "dirent.h": "c",
+        "lib_syscall.h": "c",
+        "task.h": "c",
+        "types.h": "c",
+        "fcntl.h": "c",
+        "_default_fcntl.h": "c",
+        "cpu.h": "c",
+        "irq.h": "c",
+        "cpuinlinefun.h": "c",
+        "TIME.C": "cpp",
+        "klib.h": "c",
+        "log.h": "c",
+        "memory.h": "c",
+        "list.h": "c",
+        "syscall.h": "c",
+        "fat16.h": "c",
+        "tty.h": "c",
+        "fs.h": "c"
+    },
+}

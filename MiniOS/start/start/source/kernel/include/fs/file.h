@@ -1,0 +1,40 @@
+#ifndef FILE_H
+#define FILE_H
+#include "common/types.h"
+
+#define FILE_NAME_SIZE      32
+#define FILE_TABLE_SIZE     2048
+
+typedef enum _file_type_t{
+    FILE_UNKNOWN = 0,
+    FILE_TTY,
+    FILE_DIR,
+    FILE_NORMAL,
+}file_type_t;
+
+struct _fs_t;
+
+typedef struct _file_t
+{
+    char file_name[FILE_NAME_SIZE];
+    file_type_t type;
+    u32 size;
+    int ref;    // 被打开的次数
+    int dev_id;
+    int pos;
+    int mode;
+
+    int sblk;
+    int cblk;
+    int p_index;
+
+    struct _fs_t *fs;
+}file_t;
+
+void file_table_init(void);
+file_t *file_alloc(void);
+void file_free(file_t *file);
+
+void file_inc_ref(file_t *file);
+
+#endif
